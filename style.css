@@ -7,26 +7,35 @@
     text-decoration: none;
 }
 
+:root {
+    --warnaBG: rgb(40, 41, 49);
+    --warna-textU: rgb(255, 255, 255);
+    --warna-textH: rgb(126, 126, 126);
+    --warna-text2U: rgb(255, 183, 0);
+    --warna-text2H: rgb(144, 103, 0);
+}
+
 body {
-    background-color: rgb(235, 251, 255) ;
+    background-color: var(--warnaBG);
     text-decoration: none;
     color: black;
     overflow: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE dan Edge lama */
+    font-family: "Poppins", sans-serif;
 }
 
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
-
+/* nav */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 2%;
-    background: linear-gradient(to right,rgb(204, 246, 255), #ffffff);
+    background: linear-gradient(to right, rgb(51, 53, 63),rgb(40, 41, 49) );
     border-bottom: 1px solid black;
     position: fixed;
     top: 0%;
@@ -37,16 +46,16 @@ body::-webkit-scrollbar {
 
 .navbar-logo {
     font-size: 1.5rem;
-    color: #0055aa;
+    color: var(--warna-textU);
     font-weight: 700;
     font-family: inter;
 }
 .navbar-logo span {
-    color: #0055aa;
+    color: var(--warna-textU);
 }
 
 .navbar-bar a{
-    color: #0055aa;
+    color: var(--warna-textU);
     font-size: 1.1rem;
     display: inline-block;
     margin: 0 1rem;
@@ -55,7 +64,51 @@ body::-webkit-scrollbar {
 }
 
 .navbar-bar a:hover {
-    color: #006fdf;
+    color: var(--warna-textH);
     transition: ease-in-out 242ms;
-    font-weight: 900;
+    font-weight: 550;
 }
+
+/* nav selesai */
+/* beranda */
+.beranda {
+    height: 87.9vh;
+    margin-top: 4.6rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    padding: 0 4rem;
+    padding-left: 13rem;
+}
+
+.beranda .isi .foto {
+    width: 66.3vh;
+    
+}
+
+.beranda .text h1 {
+    margin-top: -12rem;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 4rem;
+    padding: 12px;
+    color: var(--warna-textU);
+    
+}
+
+.beranda .text p {
+    width: 50rem;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 4rem;
+    margin-left: -160px;
+    color: var(--warna-text2U);
+    font-size: 38px;
+}
+
+.beranda .isi {
+
+}
+
+/* beranda selesai */
